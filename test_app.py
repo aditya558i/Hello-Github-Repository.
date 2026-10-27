@@ -1,4 +1,3 @@
-```python
 import unittest
 from app import hello_world
 
@@ -11,4 +10,3 @@ class TestHelloWorld(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-```

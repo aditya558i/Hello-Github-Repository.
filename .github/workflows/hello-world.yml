@@ -19,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      
+     
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -37,11 +37,11 @@ jobs:
       - name: Run application
         run: python app.py
 
-    
+      
       - name: Run automated tests
         run: python -m unittest -v
 
-      
+     
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -50,10 +50,12 @@ jobs:
             app.py
             test_app.py
 
-            
+  
       - name: Package application
         run: |
           mkdir -p dist
           cp app.py test_app.py dist/
           cd dist
           zip ../hello-world.zip app.py test_app.py
+
+

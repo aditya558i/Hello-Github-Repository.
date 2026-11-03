@@ -15,17 +15,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      
       - name: Check Python version
         run: python --version
 
+     
       - name: Compile Python file
         run: python -m py_compile app.py
 
+     
+      - name: Run application
+        run: python app.py
+
+    
+      - name: Run automated tests
+        run: python -m unittest -v
+
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-world-package
+          path: |
+            app.py
+            test_app.py
+
+            
+      - name: Package application
+        run: |
+          mkdir -p dist
+          cp app.py test_app.py dist/
+          cd dist
+          zip ../hello-world.zip app.py test_app.py

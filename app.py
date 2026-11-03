@@ -1,4 +1,4 @@
-# Exercise 3: Testing automatic pipeline triggering
+# Exercise 3 comment
 def hello_git():
     return "Hello, Git!"
 

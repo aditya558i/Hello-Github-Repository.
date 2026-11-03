@@ -1,6 +1,6 @@
-def hello_world():
-    return "Hello, World!"
+def hello_devops():
+    return "Hello, Devops!"
 
 
 if __name__ == "__main__":
-    print(hello_world())
+    print(hello_devops())

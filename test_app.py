@@ -1,11 +1,11 @@
 import unittest
-from app import hello_devops
+from app import hello_git
 
 
-class TestHelloDevops(unittest.TestCase):
+class TestHellogit(unittest.TestCase):
 
-    def test_hello_devops(self):
-        self.assertEqual(hello_devops(), "Hello, Git!")
+    def test_hello_git(self):
+        self.assertEqual(hello_git(), "Hello, Git!")
 
 
 if __name__ == "__main__":
